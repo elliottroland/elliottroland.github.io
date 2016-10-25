@@ -4,7 +4,7 @@ published: true
 layout: wip
 categories: [musings]
 tags: []
-date: 2016-10-25
+date: 2016-10-25 01:01:01 +00:00
 ---
 The namesake of this blog, from Philip K. Dick's *Do Androids Dream of Electric Sheep?*:
 
