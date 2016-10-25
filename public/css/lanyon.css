@@ -131,6 +131,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*
+ * Pages list
+ */
+.container.page-list {
+  background-color: #2d2659;
+}
+.container.page-list a {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.container.page-list a.active {
+  background-color: white;
+}
+
 
 /*
  * Sidebar
