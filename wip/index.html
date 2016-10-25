@@ -14,9 +14,10 @@ The following posts are works in progress and will not show up on the blogroll.
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
+      <span class="post-date">Started on {{ post.date | date_to_string }}</span>
     </h1>
 
-    {{ post.content }}
+    {{ post.content | slice:0,300 }}
   </div>
   {% endfor %}
 </div>
