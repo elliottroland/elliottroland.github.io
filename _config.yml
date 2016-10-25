@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://elliottroland.github.io
+title: Thought combinator
+tagline: Reducing kipple with clarity
+description: Thoughts on system design, software engineering, best practices, formalisms, and things like these
+paginate: 5
