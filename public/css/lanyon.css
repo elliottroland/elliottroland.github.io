@@ -103,22 +103,23 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title a:hover {
-  text-decoration: none;
-}
-.masthead-title p {
-  margin-bottom: -1rem;
+  color: #fff;
 }
 .masthead-title small {
   font-size: 45%;
   font-weight: 400;
   color: #1d183a;
   letter-spacing: 0;
+}
+.masthead-title a {
+  color: inherit;
+}
+.masthead-title a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.masthead-title p {
+  margin-bottom: -1rem;
 }
 
 @media (max-width: 48rem) {
