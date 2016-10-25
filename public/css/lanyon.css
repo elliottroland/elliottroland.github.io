@@ -143,17 +143,18 @@ h1, h2, h3, h4, h5, h6, .page-list {
 .container.page-list a {
   margin-right: 1rem;
   margin-left: 1rem;
-  padding: 1rem;
-  padding-bottom: 0rem;
-  color: #fff;
+/*  padding: 1rem;
+  padding-bottom: 0rem; */
+  color: #58537b;
   text-decoration: none;
 }
 .container.page-list a:hover {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 .container.page-list a.active {
   background-color: #483d8b;
+  color: #fff;
 }
 
 
