@@ -1,7 +1,7 @@
 ---
 title: Kipple, the end of all things
 published: true
-layout: post
+layout: page
 categories: [musings]
 tags: [wip]
 ---
