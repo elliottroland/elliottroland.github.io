@@ -97,7 +97,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 5px solid #2d2659;
+  background-color: #483d8b;
 }
 .masthead-title {
   margin-top: 0;
@@ -107,13 +108,16 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title a {
   color: #505050;
 }
+.masthead-title a:hover {
+  text-decoration: none;
+}
 .masthead-title p {
-  margin-bottom: -0.7rem;
+  margin-bottom: -1rem;
 }
 .masthead-title small {
   font-size: 45%;
   font-weight: 400;
-  color: #c0c0c0;
+  color: #1d183a;
   letter-spacing: 0;
 }
 
