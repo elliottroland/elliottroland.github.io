@@ -19,6 +19,4 @@ How do depict all of this? Let's start with functions and channels. The natural 
 
 We'll depict channels as single edges. Because channels never use other components in the course of their operation, the direction of the arrows is technically unimportant. Nevertheless, we can sometimes use out-going arrows to indicate something akin to read-only usage.
 
-<center>
-![System diagram examples]({{ site.url }}/images/2016-10-25-system-diagram-examples-1.png "Some examples")
-</center>
+![System diagram examples]({{ site.url }}/images/2016-10-25-system-diagram-examples-1.png "Some examples"){:width="100%"}
