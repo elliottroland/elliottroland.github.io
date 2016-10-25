@@ -22,15 +22,17 @@
       </div>
 
       <div class="container page-list">
-        <a class="page-list-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
-        {% assign pages_list = site.pages %}
-        {% for node in pages_list %}
-          {% if node.title != null %}
-            {% if node.layout == "page" %}
-              <a class="page-list-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        <center>
+          <a class="page-list-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
+          {% assign pages_list = site.pages %}
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.layout == "page" %}
+                <a class="page-list-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        </center>
       </div>
 
       <div class="container content">

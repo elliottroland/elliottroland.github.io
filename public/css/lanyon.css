@@ -96,8 +96,8 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 5px solid #2d2659;
+  margin-bottom: 0rem;
+/*  border-bottom: 5px solid #2d2659; */
   background-color: #483d8b;
 }
 .masthead-title {
@@ -136,13 +136,18 @@ h1, h2, h3, h4, h5, h6 {
  */
 .container.page-list {
   background-color: #2d2659;
+  margin-bottom: 3rem;
 }
 .container.page-list a {
   margin-right: 1rem;
   margin-left: 1rem;
+  text-decoration: none;
+}
+.container.page-list a:hover {
+  text-decoration: none;
 }
 .container.page-list a.active {
-  background-color: white;
+  background-color: #483d8b;
 }
 
 
