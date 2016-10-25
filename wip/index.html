@@ -3,10 +3,13 @@ layout: page
 title: Works In Progress
 date: 1972-01-01 01:01:01 +00:00
 ---
-To be filled out when I get the time.
+The following posts are works in progress and will not show up on the blogroll.
 
 <div class="posts">
-  {% for post in site.posts %}
+  {% for page in site.pages %}
+  {% if page.layout == "post" %}
+  {% if page.tags contains "wip" %}
+  {% assign post = page %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -16,5 +19,7 @@ To be filled out when I get the time.
 
     {{ post.content }}
   </div>
+  {% endif %}
+  {% endif %}
   {% endfor %}
 </div>

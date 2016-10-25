@@ -3,7 +3,7 @@ title: Kipple, the end of all things
 published: true
 layout: post
 categories: [musings]
-tags: []
+tags: [wip]
 ---
 The namesake of this blog, from Philip K. Dick's *Do Androids Dream of Electric Sheep?*:
 

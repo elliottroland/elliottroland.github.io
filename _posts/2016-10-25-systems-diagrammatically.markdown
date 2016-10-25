@@ -2,7 +2,7 @@
 published: true
 title: Systems diagrammatically
 layout: post
-tags: [wip]
+tags: []
 categories: [formalisms]
 ---
 When I studied [category theory](https://en.wikipedia.org/wiki/Category_theory) I was struck by how expressive such simple diagrams could be if used correctly. After reading [Lewis and Fowler on microservices](http://www.martinfowler.com/articles/microservices.html) I was inspired to develop a somewhat formal "diagrammatic language" for systems. First we outline some distinctions, and then we give the diagrammatic formalism.
