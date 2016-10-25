@@ -17,6 +17,14 @@ As they stand these distinctions apply very generally. We could use them to talk
 
 How do depict all of this? Let's start with functions and channels. The natural way to depict a component is as a box, with arrows coming in and going out of it representing the flow of information. We'll reserve boxes for functions, since these most closely resemble our intuitive notion of a component (as will be become clearer as we proceed). Since operations are broadly considered as request-response cycles there's no sense in drawing both arrows when one suffices for clarity, so we'll typically represent the request as an arrow from requester to function. Thus, the arrows coming *out* of a function will represent the calls it uses as part of its operation. In general, we'll read diagrams from left to right, and try as best we can to keep callers on the left.
 
-We'll depict channels as single edges. Because channels never use other components in the course of their operation, the direction of the arrows is technically unimportant. Nevertheless, we can sometimes use out-going arrows to indicate something akin to read-only usage.
+We'll depict channels as single edges. Because channels never use other components in the course of their operation, the direction of the arrows is technically unimportant. Nevertheless, we can sometimes use out-going arrows to indicate something akin to read-only usage. Consider the following examples:
 
 ![System diagram examples]({{ site.url }}/images/2016-10-25-system-diagram-examples-1.png){:width="100%"}
+
+On the top-left we have what is perhaps the most familiar. Some component *A* calls *B* and *C*, and *B* in turn calls *D* and *E*, and *D* in turn calls some channel perhaps to update some state. Technically the diagram is incomplete, since we have functions (boxes) that aren't calling other components.
+
+On the top-right we have *A* calling a channel, and then *B* reading from that channel. Perhaps *A* is updating state which is later being read by *B*.
+
+On the bottom-left we have a series of function calls, with *B*'s processing also taking into account what it reads from the channel.
+
+And finally, on the bottom-right we have something very similar to what's happening on the top-right except that this time *A* (that which writes to the state) and *C* (that which reads from it) are connected by an intermediate function call.
