@@ -44,7 +44,7 @@ html {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .page-list {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
@@ -135,16 +135,22 @@ h1, h2, h3, h4, h5, h6 {
  * Pages list
  */
 .container.page-list {
+  max-width: 100%;
+  width: 100%;
   background-color: #2d2659;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 .container.page-list a {
   margin-right: 1rem;
   margin-left: 1rem;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  color: #fff;
   text-decoration: none;
 }
 .container.page-list a:hover {
   text-decoration: none;
+  color: inherit;
 }
 .container.page-list a.active {
   background-color: #483d8b;
