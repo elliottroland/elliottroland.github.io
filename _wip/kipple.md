@@ -1,9 +1,10 @@
 ---
 title: Kipple, the end of all things
 published: true
-layout: page
+layout: wip
 categories: [musings]
-tags: [wip]
+tags: []
+date: 2016-10-25
 ---
 The namesake of this blog, from Philip K. Dick's *Do Androids Dream of Electric Sheep?*:
 
