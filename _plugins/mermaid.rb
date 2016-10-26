@@ -8,7 +8,6 @@ module Jekyll
     end
 
     def render(context)
-      @config = context.registers[:site].config['mermaid']
       "<div class=\"mermaid\">#{super}</div>"
     end
   end
