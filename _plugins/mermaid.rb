@@ -13,3 +13,5 @@ module Jekyll
     end
   end
 end
+
+Liquid::Template.register_tag('mermaid', Jekyll::Mermaid)
