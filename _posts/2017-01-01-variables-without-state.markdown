@@ -4,7 +4,6 @@ title: Variables without state
 layout: wip
 tags: []
 categories: [paradigms]
-date: 2016-10-26 01:01:01 +00:00
 ---
 [We've seen]({{ site.url }}/paradigms/2017/01/01/programming-paradigms.html) that the difference between imperative and functional programming languages lies in how freely functions can mutate state. Imperative languages have statements (which mutate state) and purely functional languages only have expressions (which don't mutate state). Someone more familiar with imperative than functional languages (which is most people these days) might raise an eyebrow at this: if you can't mutate state, does that mean that functional languages can't assign variables? And if so, then how could they possibly be as powerful as imperative languages?
 
