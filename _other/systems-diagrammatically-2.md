@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Systems diagrammatically, part 2"
-layout: post
+layout: wip
 tags: []
 categories: [formalisms]
 date: 2016-10-26 01:01:01 +00:00

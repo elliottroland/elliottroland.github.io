@@ -1,7 +1,7 @@
 ---
 published: true
 title: Systems diagrammatically
-layout: post
+layout: wip
 tags: []
 categories: [formalisms]
 ---

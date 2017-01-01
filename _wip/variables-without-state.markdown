@@ -1,7 +1,7 @@
 ---
 published: true
 title: Variables without state
-layout: post
+layout: wip
 tags: []
 categories: [paradigms]
 ---
