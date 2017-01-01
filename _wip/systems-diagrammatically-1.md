@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Systems diagrammatically
 layout: post
 tags: []
