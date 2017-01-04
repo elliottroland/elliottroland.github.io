@@ -1,6 +1,6 @@
 ---
-published: true
-# title: Simple, complex, and complicated
+published: false
+title: Simple, complex, and complicated
 layout: post
 tags: []
 categories: [zen]
