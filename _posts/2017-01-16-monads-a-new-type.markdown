@@ -36,4 +36,13 @@ The third example there just unpacks the second by assigning the intermediate va
 
 You could think of the `->` operator as a constructor *of types*: it takes a data type and any other type, and then returns a function type made up of those two. In Haskell there are a number of ways to create types, but here what interests us is this idea of creating new types *out of other types*. In particular we're interested in the notion of a *type class*.
 
-The word "class" might make us think of object classes, but it can't be stressed enough that *type* classes are different to *object* classes. Nevertheless, there is a core similarity: just as object classes allow us to stamp out objects that can be used in certain ways, so too type classes allow us to stamp out types that can be used in certain ways.
+The word "class" might bring to mind the classes we're familiar with in object-orientated languages, and there is some degree of commonality between them (on account of which they're both called *classes*): just as object classes allow us to stamp out objects that can be used in certain ways, so too type classes allow us to stamp out types that can be used in certain ways. Nevertheless, that's where the similarities end. A type class encodes how its type instances can be used in specific functions. Now, of course, if we're going to write these function signatures in a type class, we'll need to be able to reference it, and this is achieved by using a variable quantified over the type instance. This all sounds a bit mathematical, but in practice it's quite straight forward:
+
+```haskell
+class Animal a where
+  sayHello :: a -> String
+  numberOfLegs :: a -> Int
+  mate :: a -> a -> a
+```
+
+This defines the type class `Animal`, 
