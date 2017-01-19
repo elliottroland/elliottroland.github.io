@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Monads: A New Type"
 layout: post
 tags: []
@@ -36,13 +36,28 @@ The third example there just unpacks the second by assigning the intermediate va
 
 You could think of the `->` operator as a constructor *of types*: it takes a data type and any other type, and then returns a function type made up of those two. In Haskell there are a number of ways to create types, but here what interests us is this idea of creating new types *out of other types*. In particular we're interested in the notion of a *type class*.
 
-The word "class" might bring to mind the classes we're familiar with in object-orientated languages, and there is some degree of commonality between them (on account of which they're both called *classes*): just as object classes allow us to stamp out objects that can be used in certain ways, so too type classes allow us to stamp out types that can be used in certain ways. Nevertheless, that's where the similarities end. A type class encodes how its type instances can be used in specific functions. Now, of course, if we're going to write these function signatures in a type class, we'll need to be able to reference it, and this is achieved by using a variable quantified over the type instance. This all sounds a bit mathematical, but in practice it's quite straight forward:
+The word "class" might bring to mind the classes we're familiar with in object-orientated languages, and there is some degree of commonality between them (on account of which they're both called *classes*): just as object classes allow us to stamp out objects that can be used in certain ways, so too type classes allow us to stamp out types that can be used in certain ways. Nevertheless, that's where the similarities end. A type class encodes how its type instances can be used in specific functions. Now, of course, if we're going to write these function signatures in a type class, we'll need to be able to reference it, and this is achieved by using a variable quantified over the type instance. This all sounds a bit technical, but in practice it's quite straightforward:
 
 ```haskell
 class Animal a where
   sayHello :: a -> String
   numberOfLegs :: a -> Int
-  mate :: a -> a -> a
+
+  sayHelloTwice :: a -> String
+  sayHelloTwice animal = (sayHello animal) ++ " " ++ (sayHello animal)
 ```
 
-This defines the type class `Animal`, 
+This defines the type class `Animal`, and the variable `a` in these definitions represents a particular type which falls under the `Animal` type class. This definition says that any animal type can be used in the functions listed, and that if `sayHello` is defined then `sayHelloTwice` has a default definition in terms of it (although, it can happily be overridden). If we wanted to create instances of this class, we would need to specify *at least* the three functions that don't have default definitions. If we already had defined types `Human` and `Dog` and wanted to make these instances of `Animal`, then we'd do the following:
+
+```haskell
+instance Animal Dog where
+  sayHello human = "Woof!"
+  numberOfLegs human = 4
+
+instance Animal Human where
+  sayHello human = "Hi, my name is " ++ (nameOf human)
+  numberOfLegs human = 2
+  sayHelloTwice human = (sayHello human) ++ ". Oh, hello again!"
+```
+
+In this case, the dog says hello twice by barking twice, while the human remembers they've met you and only introduces themselves once. This is all very simple, but it gets the point across. Type classes are [one of the fundamental constructs of Haskell](https://youtu.be/KnV9L5xiHt0?t=15m30s), and will play a key role in the coming posts. If you're interested in reading more about them, be sure to check out the [Learn You a Haskell For Great Good chapter on them](http://learnyouahaskell.com/types-and-typeclasses).
