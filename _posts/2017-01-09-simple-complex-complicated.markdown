@@ -15,7 +15,7 @@ The similarity of the words involved has sparked lots of conversation on the int
 
 I think a lot of people get confused by the two aphorisms because they assume that they pick out three points on a single spectrum, having simple and complicated on either end with complex being some sort of midpoint between the two. As I see it the complexity of a piece of code refers to *how many parts there are*, while the complicatedness refers to *how difficult it is to understand*. Confusingly, simple can be used in either sense: simple can mean uncomplex or uncomplicated. So, the point of the two aphorisms is that smaller code is good, but not if it makes your code difficult to understand.
 
-Consider the [boolean trap](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap), in which a function has an unnamed boolean parameter that modifies that function's behaviour. As discussed in the first link, you might come across a `repaint` function which is called as follows:
+Consider the *boolean trap*, in which a function has an unnamed boolean parameter that modifies that function's behaviour. As discussed [here](https://ariya.io/2011/08/hall-of-api-shame-boolean-trap), you might come across a `repaint` function which is called as follows:
 
 ```java
 widget.repaint(false)
